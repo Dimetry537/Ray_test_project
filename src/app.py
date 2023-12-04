@@ -3,6 +3,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from src.auth.users import auth_backend, fastapi_users
 from src.schemas.users import UserCreate, UserRead, UserUpdate
+from src.routes.posts import router as posts
+from src.routes.likes import router as likes
+from src.routes.dislikes import router as dislike
 
 app = FastAPI(title="Ray_test_project")
 
@@ -36,3 +39,9 @@ app.include_router(
     prefix="/users",
     tags=["users"],
 )
+
+app.include_router(posts)
+
+app.include_router(likes)
+
+app.include_router(dislike)
