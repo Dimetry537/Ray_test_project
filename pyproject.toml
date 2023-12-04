@@ -16,6 +16,8 @@ python-dotenv = "^1.0.0"
 celery = "^5.3.6"
 flower = "^2.0.1"
 fastapi-users = {extras = ["sqlalchemy"], version = "^12.1.2"}
+httpx = "^0.25.2"
+pytest = "^7.4.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.4.3"

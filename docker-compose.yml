@@ -8,12 +8,13 @@ services:
       - .:/app
     depends_on:
       - redis
-      - minio
       - celery
       - flower
 
   pg:
     image: postgres:14
+    ports:
+      - "5432:5432"
     environment:
       - POSTGRES_USER=docker
       - POSTGRES_PASSWORD=docker

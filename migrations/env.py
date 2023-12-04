@@ -12,6 +12,9 @@ sys.path.append(os.path.join(sys.path[0], 'src'))
 
 from src.db.config import DB_HOST, DB_PORT, DB_PASS, DB_NAME, DB_USER
 from src.models.users import User
+from src.models.posts import Post
+from src.models.likes import Like
+from src.models.dislikes import Dislike
 
 from src.db.base import Base
 
